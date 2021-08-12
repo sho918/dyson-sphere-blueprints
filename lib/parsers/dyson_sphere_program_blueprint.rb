@@ -33,7 +33,7 @@ module Parsers
         else
           raise "Couldn't decode blueprint: #{e.message}"
         end
-        return nil
+        nil
       end
     end
 

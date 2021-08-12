@@ -1,13 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :help ]
+  skip_before_action :authenticate_user!, only: [:home, :help]
 
   def home
     @filters = {
       search: nil,
       tags: [],
-      order: 'recent',
+      order: "recent",
       mod_id: @mods.first.id,
-      mod_version: 'Any'
+      mod_version: "Any",
     }
 
     @filter_mod = @mods.first
