@@ -26,6 +26,7 @@ class Blueprint < ApplicationRecord
   validates :tag_list, length: { minimum: 1, maximum: 10, message: "needs at least one tag, maximum 10." }
   validates :cover_picture, presence: true
   validates :additional_pictures, length: { maximum: 4, message: "Too many pictures. Please make sure you don't have too many pictures attached." }
+  validates :mod_version, presence: true
   validate :encoded_blueprint_parsable
 
   pg_search_scope :search_by_title,

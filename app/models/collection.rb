@@ -8,6 +8,9 @@ class Collection < ApplicationRecord
   belongs_to :user
   has_many :blueprints, dependent: :destroy
 
+  validates :name, presence: true
+  validates :type, presence: true
+
   friendly_id :name, use: :slugged
 
   def total_votes

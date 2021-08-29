@@ -1,6 +1,10 @@
 class Mod < ApplicationRecord
   has_many :blueprints, dependent: :restrict_with_error
 
+  validates :name, presence: true
+  validates :author, presence: true
+  validates :uuid4, presence: true
+
   # Used to decide which mods are automaticaly fetched from the thunderstore API
   MANAGED_MODS = [
     "MultiBuild",

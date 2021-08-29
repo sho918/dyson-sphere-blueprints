@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   before_create :create_default_collections
 
-  validates :username, uniqueness: true
+  validates :username, presence: true, uniqueness: true
 
   def admin?
     role == "admin"
