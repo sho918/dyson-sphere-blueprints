@@ -6,7 +6,6 @@ import recipes from '../data/gameRecipes.json';
 const images = require.context('../../assets/images/game_icons', true)
 const imagePath = name => images(name, true)
 
-
 export default class extends Controller {
   static targets = ['value']
 
